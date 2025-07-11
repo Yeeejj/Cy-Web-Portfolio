@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700&family=Cormorant:wght@400;500;600;700&family=Mate&family=Tajawal:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 43 33% 90%;
+    --foreground: 0 0% 0%;
+    --card: 43 33% 90%;
+    --card-foreground: 0 0% 0%;
+    --popover: 43 33% 90%;
+    --popover-foreground: 0 0% 0%;
+    --primary: 0 100% 19%;
+    --primary-foreground: 43 33% 90%;
+    --secondary: 24 37% 75%;
+    --secondary-foreground: 0 0% 0%;
+    --accent: 24 37% 75%;
+    --accent-foreground: 0 0% 0%;
+    --muted: 24 37% 75%;
+    --muted-foreground: 0 0% 0%;
+    --border: 24 37% 75%;
+    --input: 24 37% 75%;
+    --ring: 0 100% 19%;
+    --radius: 1rem;
+  }
+
+  body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    @apply bg-background text-foreground antialiased;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Cormorant', serif;
+  }
+
+  p {
+    font-family: 'Mate', serif;
+  }
+
+  .font-tajawal {
+    font-family: 'Tajawal', sans-serif;
+  }
+
+  .font-cormorant {
+    font-family: 'Cormorant', serif;
+  }
+
+  .section {
+    @apply py-20 px-4 sm:px-6 lg:px-8;
+  }
+
+  .container {
+    @apply max-w-7xl mx-auto;
+  }
+
+  .playful-shadow {
+    @apply hover:shadow-[4px_4px_0_0_hsl(var(--primary))] transition-all duration-300;
+  }
+
+  .playful-border {
+    @apply border-2 border-primary hover:border-secondary transition-colors duration-300;
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.5s ease;
+}
